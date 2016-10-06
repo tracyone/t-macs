@@ -20,5 +20,9 @@
 
 (global-set-key (kbd "<f2>") 'open-my-init-file)
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+;;补全路径
+(global-set-key (kbd "s-/") 'hippie-expand)
+
+(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
 
 (provide 'init-keybinding)

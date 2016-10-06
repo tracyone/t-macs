@@ -17,6 +17,7 @@
                             exec-path-from-shell
                             counsel
                             popwin
+                            reveal-in-osx-finder
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()
@@ -55,6 +56,9 @@
 (global-hungry-delete-mode)
 
 (require 'smex)
+
+(require 'dired)
+(require 'dired-x)
 ;;(global-set-key (kbd "M-x") 'smex)
 
 (provide 'init-packages)

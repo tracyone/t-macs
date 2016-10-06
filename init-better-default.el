@@ -13,6 +13,15 @@
 (delete-selection-mode t)
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+(fset 'yes-or-no-p 'y-or-n-p)
+;;允许直接递归删除而不询问
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+;; do not auto generate dir buf
+(setq dired-dwim-target t)
+
+
+  (put 'dired-find-alternate-file 'disabled nil)
 
   (defun indent-buffer ()
     "Indent the currently visited buffer."
@@ -33,5 +42,15 @@
         (indent-buffer)
         (message "Indented buffer.")))))
 
+(setq hippie-expand-try-functions-list '(try-expand-dabbrev
+                                         try-expand-dabbrev-all-buffers
+                                         try-expand-dabbrev-from-kill
+                                         try-complete-file-name-partially
+                                         try-complete-file-name
+                                         try-expand-all-abbrevs
+                                         try-expand-list
+                                         try-expand-line
+                                         try-complete-lisp-symbol-partially
+                                         try-complete-lisp-symbol))
 
 (provide 'init-better-default)
