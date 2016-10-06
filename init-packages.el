@@ -18,6 +18,7 @@
                             counsel
                             popwin
                             reveal-in-osx-finder
+                            js2-mode
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()

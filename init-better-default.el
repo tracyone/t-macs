@@ -42,6 +42,18 @@
         (indent-buffer)
         (message "Indented buffer.")))))
 
+(defun remove-dos-eol ()
+  "Replace DOS eolns CR LF with Unix eolns CR"
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
+
+(defun hidden-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
 ;;光标放在文字中间的时候也高亮两边的括号
 (define-advice show-paren-function (:around (fn) fix-show-paren-function)
                "Highlight enclosing parens."
@@ -60,5 +72,11 @@
                                          try-expand-line
                                          try-complete-lisp-symbol-partially
                                          try-complete-lisp-symbol))
+
+;; config js2-mode for js files
+(setq auto-mode-alist
+	  (append
+	   '(("\\.js\\'" . js2-mode))
+	   auto-mode-alist))
 
 (provide 'init-better-default)
