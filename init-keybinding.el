@@ -19,5 +19,6 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 
 (global-set-key (kbd "<f2>") 'open-my-init-file)
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
 (provide 'init-keybinding)
