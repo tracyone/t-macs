@@ -69,6 +69,8 @@
 
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
+(setq auto-save-default nil)
+
 ;; highlight match
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
