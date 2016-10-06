@@ -54,7 +54,7 @@
 (global-company-mode t)
 
 ;; 细条状的光标
-(setq-default cursor-type 'box)
+(setq-default cursor-type 'bar)
 (setq make-backup-files nil)
 
 
@@ -71,6 +71,10 @@
 
 (setq auto-save-default nil)
 
+(setq make-backup-files nil)
+
+
+
 ;; highlight match
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
@@ -83,6 +87,9 @@
 
 (global-auto-revert-mode t)
 
+(require 'popwin)
+
+(popwin-mode t)
 ;;Plugin setting
 (require 'hungry-delete)
 (global-hungry-delete-mode)
