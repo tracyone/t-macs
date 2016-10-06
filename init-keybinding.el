@@ -26,4 +26,13 @@
 
 (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
 
+;;
+(global-set-key (kbd "M-s i") 'counsel-imenu)
+
+;;正则递归搜索
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+;;expand region
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 (provide 'init-keybinding)

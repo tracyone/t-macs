@@ -19,6 +19,9 @@
                             popwin
                             reveal-in-osx-finder
                             js2-mode
+                            web-mode
+                            js2-refactor
+                            expand-region
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()
