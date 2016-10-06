@@ -1,0 +1,3 @@
+# tracyone's emacs config
+
+To be continue ...
