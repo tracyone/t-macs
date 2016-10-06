@@ -22,6 +22,7 @@
                             web-mode
                             js2-refactor
                             expand-region
+                            iedit ;;多光标编辑
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()

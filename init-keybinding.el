@@ -35,4 +35,7 @@
 ;;expand region
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+;;iedit
+(global-set-key (kbd "M-s e") 'iedit-mode)
+
 (provide 'init-keybinding)
