@@ -19,6 +19,7 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 
 (global-set-key (kbd "<f2>") 'open-my-init-file)
+(global-set-key (kbd "<f1>") 'reveal-in-osx-finder)
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 ;;补全路径
 (global-set-key (kbd "s-/") 'hippie-expand)
