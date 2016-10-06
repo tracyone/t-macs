@@ -34,8 +34,6 @@
 
 (global-hungry-delete-mode)
 
-(require 'smartparens-config)
-
 (smartparens-global-mode t)
 
 (ivy-mode 1)
@@ -47,5 +45,16 @@
 
 (require 'popwin)
 (popwin-mode t)
+
+;;支持最近文件
+(require 'recentf)
+(recentf-mode 1)
+
+;;Plugin setting
+(require 'hungry-delete)
+(global-hungry-delete-mode)
+
+(require 'smex)
+;;(global-set-key (kbd "M-x") 'smex)
 
 (provide 'init-packages)
