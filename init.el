@@ -1,49 +1,18 @@
-
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory r.
-;; c-h f:looking for current cursor word 's help
-
 ;(package-initialize)
 ;添加外部packages源
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
-  )
+(add-to-list 'load-path  "~/.emacs.d/lisp")
 
-(require 'cl)
+(require 'init-packages)
 
-(defvar tracyone/packages '(
-                            company
-                            monokai-theme
-			    hungry-delete
-			    smex
-			    swiper
-			    counsel
-			    popwin
-                            ) "Default packages" )
-
-(defun tracyone/packages-installed-p ()
-  (loop for pkg in tracyone/packages
-        when (not (package-installed-p pkg)) do ( return nil)
-        finally (return t )))
-
-(unless (tracyone/packages-installed-p)
-  (message "%s" "Refreshing package dadabase ... ")
-  (package-refresh-contents)
-  (dolist (pkg tracyone/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
-
+(setq ring-bell-function 'ignore)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (global-linum-mode t)
 (electric-indent-mode t)
 (setq inhibit-splash-screen t)
+
+;;激活缩写模式
+(abbrev-mode t)
 
 (defun open-my-init-file()
   (interactive)
@@ -51,7 +20,6 @@
 
 (global-set-key (kbd "<f2>") 'open-my-init-file)
 
-(global-company-mode t)
 
 ;; 细条状的光标
 (setq-default cursor-type 'bar)
@@ -83,13 +51,9 @@
 
 ;;高亮显示当前行
 (global-hl-line-mode t)
-(load-theme 'monokai t)
 
 (global-auto-revert-mode t)
 
-(require 'popwin)
-
-(popwin-mode t)
 ;;Plugin setting
 (require 'hungry-delete)
 (global-hungry-delete-mode)
@@ -99,8 +63,6 @@
 ;;(global-set-key (kbd "M-x") 'smex)
 
 ;;smex simlar to ctrlp
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
