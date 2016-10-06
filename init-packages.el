@@ -23,6 +23,7 @@
                             js2-refactor
                             expand-region
                             iedit ;;多光标编辑
+			    org-pomodoro
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()

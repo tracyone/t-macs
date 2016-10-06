@@ -10,8 +10,8 @@
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-better-default)
-(require 'init-keybinding)
 (require 'init-org)
+(require 'init-keybinding)
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
