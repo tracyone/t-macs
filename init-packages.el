@@ -36,6 +36,8 @@
 (global-hungry-delete-mode)
 
 (smartparens-global-mode t)
+;;一些情况下不要出现两个单引号
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -60,5 +62,6 @@
 (require 'dired)
 (require 'dired-x)
 ;;(global-set-key (kbd "M-x") 'smex)
+
 
 (provide 'init-packages)

@@ -42,6 +42,14 @@
         (indent-buffer)
         (message "Indented buffer.")))))
 
+;;光标放在文字中间的时候也高亮两边的括号
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+               "Highlight enclosing parens."
+               (cond ((looking-at-p "\\s(") (funcall fn))
+                     (t (save-excursion
+                          (ignore-errors (backward-up-list))
+                          (funcall fn)))))
+
 (setq hippie-expand-try-functions-list '(try-expand-dabbrev
                                          try-expand-dabbrev-all-buffers
                                          try-expand-dabbrev-from-kill
