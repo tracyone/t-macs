@@ -79,6 +79,8 @@
 (global-hl-line-mode t)
 (load-theme 'monokai t)
 
+(global-auto-revert-mode t)
+
 ;;Plugin setting
 (require 'hungry-delete)
 (global-hungry-delete-mode)
@@ -105,7 +107,6 @@
 (global-set-key (kbd "C-c k") 'counsel-ag)
 (global-set-key (kbd "C-x l") 'counsel-locate)
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
