@@ -1,3 +1,9 @@
+;; emacs config
+;; author:tracyone
+;; email:tracyone@live.cn
+;; project url:https://github.com/tracyone/t-macs
+;; date:2016-10-7 00:15 in GuangZhou
+
 (package-initialize)
 
 ;添加外部packages源
