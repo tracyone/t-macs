@@ -14,6 +14,7 @@
                             company
                             gruvbox-theme
                             badwolf-theme
+                            molokai-theme
                             color-theme-solarized
                             yoshi-theme
                             molokai-theme
@@ -71,10 +72,7 @@
 
 (global-company-mode t)
 
-;;(load-theme 'solarized t)
-;;(load-theme 'yoshi t)
-(load-theme 'badwolf t)
-;(load-theme 'gruvbox t)
+(load-theme 'molokai t)
 
 (require 'popwin)
 (popwin-mode t)
