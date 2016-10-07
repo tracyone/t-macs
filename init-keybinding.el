@@ -18,7 +18,20 @@
 (global-set-key (kbd "C-x l") 'counsel-locate)
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 
+;;open emacs config file
 (global-set-key (kbd "<f2>") 'open-my-init-file)
+(evil-leader/set-key "vc" 'open-my-init-file)
+(evil-leader/set-key
+  "vc" 'open-my-init-file
+  "vv" 'helm-do-ag-project-root
+  "bk" 'kill-buffer
+  "cc" 'comment-region
+  "cu" 'comment-or-uncomment-region
+  "bb" 'switch-to-buffer
+  "fr" 'recentf-open-files
+  "pf" 'counsel-git
+  )
+
 (global-set-key (kbd "<f1>") 'reveal-in-osx-finder)
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 ;;补全路径
@@ -50,5 +63,7 @@
 
 ;;readline 快捷键设定
 (global-set-key (kbd "C-w") 'backward-kill-word)
+
+(global-set-key (kbd "<f3>") 'magit-status)
 
 (provide 'init-keybinding)

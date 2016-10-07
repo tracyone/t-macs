@@ -8,6 +8,9 @@
 (setq auto-save-default nil)
 (electric-indent-mode t)
 
+;;不询问是否编辑git文件的链接文件
+(setq vc-follow-symlinks t)
+
 
 (add-to-list 'exec-path "/usr/local/bin")
 
@@ -149,5 +152,30 @@
                   "copy theResult to the end of links\n"
                   "return links as string\n"))))
     (format "%s" (s-chop-suffix "\"" (s-chop-prefix "\"" result)))))
+
+
+;; relative line number
+;; (defvar my-linum-format-string "%3d")
+
+;; (add-hook 'linum-before-numbering-hook 'my-linum-get-format-string)
+
+;; (defun my-linum-get-format-string ()
+;;   (let* ((width (1+ (length (number-to-string
+;;                              (count-lines (point-min) (point-max))))))
+;;          (format (concat "%" (number-to-string width) "d")))
+;;     (setq my-linum-format-string format)))
+
+;; (defvar my-linum-current-line-number 0)
+
+;; (setq linum-format 'my-linum-relative-line-numbers)
+
+;; (defun my-linum-relative-line-numbers (line-number)
+;;   (let ((offset (- line-number my-linum-current-line-number)))
+;;     (propertize (format my-linum-format-string offset) 'face 'linum)))
+
+;; (defadvice linum-update (around my-linum-update)
+;;   (let ((my-linum-current-line-number (line-number-at-pos)))
+;;     ad-do-it))
+;; (ad-activate 'linum-update)
 
 (provide 'init-better-default)

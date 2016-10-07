@@ -4,12 +4,19 @@
   (require 'package)
   (package-initialize)
   (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                           ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
-  )
+                           ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+                           ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+                          )))
+
+     
 
 (defvar tracyone/packages '(
                             company
                             gruvbox-theme
+                            badwolf-theme
+                            color-theme-solarized
+                            yoshi-theme
+                            molokai-theme
                             hungry-delete
                             smex
                             swiper
@@ -28,6 +35,11 @@
 			    ;;flycheck
 			    auto-yasnippet
 			    evil
+			    evil-leader
+			    evil-surround
+			    magit
+			    window-numbering
+			    powerline
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()
@@ -57,7 +69,10 @@
 
 (global-company-mode t)
 
-(load-theme 'gruvbox t)
+;;(load-theme 'solarized t)
+;;(load-theme 'yoshi t)
+(load-theme 'badwolf t)
+;(load-theme 'gruvbox t)
 
 (require 'popwin)
 (popwin-mode t)
@@ -84,6 +99,18 @@
 
 (evil-mode 1)
 (setq evil-want-C-u-scroll 1)
+
+(global-evil-leader-mode)
+(evil-leader/set-leader "SPC")
+
+(window-numbering-mode)
+
+(require 'powerline)
+
+(powerline-default-theme)
+
+(require 'evil-surround)
+(global-evil-surround-mode)
 
 (provide 'init-packages)
 
