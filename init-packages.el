@@ -9,7 +9,7 @@
 
 (defvar tracyone/packages '(
                             company
-                            monokai-theme
+                            gruvbox-theme
                             hungry-delete
                             smex
                             swiper
@@ -25,8 +25,9 @@
                             iedit ;;多光标编辑
 			    org-pomodoro
 			    helm-ag
-			    flycheck
+			    ;;flycheck
 			    auto-yasnippet
+			    evil
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()
@@ -56,7 +57,7 @@
 
 (global-company-mode t)
 
-(load-theme 'monokai t)
+(load-theme 'gruvbox t)
 
 (require 'popwin)
 (popwin-mode t)
@@ -75,11 +76,14 @@
 (require 'dired-x)
 ;;(global-set-key (kbd "M-x") 'smex)
 
-(global-flycheck-mode)
+;(global-flycheck-mode)
 
 (require 'yasnippet)
 (yas-global-mode 1)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
+
+(evil-mode 1)
+(setq evil-want-C-u-scroll 1)
 
 (provide 'init-packages)
 

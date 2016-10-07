@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-minimum-prefix-length 3)
+ '(evil-want-C-u-scroll t)
  '(package-selected-packages (quote (smex hungry-delete monokai-theme company)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 70))

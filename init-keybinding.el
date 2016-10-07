@@ -46,5 +46,9 @@
   (define-key company-active-map (kbd "M-p") nil)
   (define-key company-active-map (kbd "C-n") #'company-select-next)
     (define-key company-active-map (kbd "C-p") #'company-select-previous)
-  )
+    )
+
+;;readline 快捷键设定
+(global-set-key (kbd "C-w") 'backward-kill-word)
+
 (provide 'init-keybinding)
