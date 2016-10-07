@@ -26,6 +26,7 @@
 			    org-pomodoro
 			    helm-ag
 			    flycheck
+			    auto-yasnippet
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()
@@ -46,6 +47,9 @@
 (smartparens-global-mode t)
 ;;一些情况下不要出现两个单引号
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+
+(sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
+
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
