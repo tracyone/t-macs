@@ -36,6 +36,7 @@
 			    auto-yasnippet
 			    evil
 			    evil-leader
+			    evil-easymotion
 			    evil-surround
 			    magit
 			    window-numbering
@@ -115,6 +116,8 @@
 
 (which-key-mode 1)
 (setq which-key-side-window-location 'right)
+
+(require 'evil-easymotion)
 
 (provide 'init-packages)
 

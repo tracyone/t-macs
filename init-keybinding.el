@@ -67,4 +67,8 @@
 
 (global-set-key (kbd "<f3>") 'magit-status)
 
+(evilem-define (kbd "W") 'evil-forward-word-begin)
+(evilem-define (kbd "B") 'evil-backward-WORD-begin)
+
 (provide 'init-keybinding)
+
