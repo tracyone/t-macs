@@ -8,19 +8,19 @@
       '(("t" "Todo" entry (file+headline "~/.emacs.d/gtd.org" "Workspace")
          "* TODO [#B] %?\n  %i\n"
          :empty-lines 1)
-        ("n" "notes" entry (file+headline "~/.emacs.d/notes.org" "Quick notes")
+        ("n" "gtd" entry (file+headline "~/.emacs.d/gtd.org" "Quick gtd")
          "* %?\n  %i\n %U"
          :empty-lines 1)
-        ("b" "Blog Ideas" entry (file+headline "~/.emacs.d/notes.org" "Blog Ideas")
+        ("b" "Blog Ideas" entry (file+headline "~/.emacs.d/gtd.org" "Blog Ideas")
          "* TODO [#B] %?\n  %i\n %U"
          :empty-lines 1)
         ("s" "Code Snippet" entry
          (file "~/.emacs.d/snippets.org")
          "* %?\t%^g\n#+BEGIN_SRC %^{language}\n\n#+END_SRC")
-        ("c" "Chrome" entry (file+headline "~/.emacs.d/notes.org" "Quick notes")
+        ("c" "Chrome" entry (file+headline "~/.emacs.d/gtd.org" "Quick gtd")
          "* TODO [#C] %?\n %(tracyone/retrieve-chrome-current-tab-url)\n %i\n %U"
          :empty-lines 1)
-        ("l" "links" entry (file+headline "~/.emacs.d/notes.org" "Quick notes")
+        ("l" "links" entry (file+headline "~/.emacs.d/gtd.org" "Quick gtd")
          "* TODO [#C] %?\n  %i\n %a \n %U"
          :empty-lines 1)
         ("j" "Journal Entry"

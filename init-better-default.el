@@ -8,6 +8,10 @@
 (setq auto-save-default nil)
 (electric-indent-mode t)
 
+
+(add-to-list 'exec-path "/usr/local/bin")
+
+
 ;;高亮显示当前行
 (global-hl-line-mode t)
 (delete-selection-mode t)

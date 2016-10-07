@@ -24,6 +24,8 @@
                             expand-region
                             iedit ;;多光标编辑
 			    org-pomodoro
+			    helm-ag
+			    flycheck
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()
@@ -69,5 +71,11 @@
 (require 'dired-x)
 ;;(global-set-key (kbd "M-x") 'smex)
 
+(global-flycheck-mode)
+
+(require 'yasnippet)
+(yas-global-mode 1)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 (provide 'init-packages)
+
