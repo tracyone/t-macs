@@ -206,7 +206,7 @@
  :ensure t
   :config
   (evilem-define (kbd "W") 'evil-forward-word-begin)
-  (evilem-define (kbd "B") 'evil-backward-WORD-begin)
+  (evilem-define (kbd "B") 'evil-backward-word-begin)
   )
 
 (use-package counsel
