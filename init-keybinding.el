@@ -29,7 +29,8 @@
   "cu" 'comment-or-uncomment-region
   "bb" 'switch-to-buffer
   "fr" 'recentf-open-files
-  "pf" 'counsel-git
+  "g" 'counsel-git
+  "p" 'counsel-find-file
   )
 
 (global-set-key (kbd "<f1>") 'reveal-in-osx-finder)

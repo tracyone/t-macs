@@ -40,6 +40,7 @@
 			    magit
 			    window-numbering
 			    powerline
+			    which-key;;实时显示按键提示
                             ) "Default packages" )
 
 (defun tracyone/packages-installed-p ()
@@ -111,6 +112,9 @@
 
 (require 'evil-surround)
 (global-evil-surround-mode)
+
+(which-key-mode 1)
+(setq which-key-side-window-location 'right)
 
 (provide 'init-packages)
 
