@@ -151,6 +151,13 @@
   (add-hook 'prog-mode-hook #'yas-minor-mode)
   )
 
+(use-package key-chord
+  :ensure t
+  :init
+  (setq key-chord-two-keys-delay 0.5)
+  (key-chord-mode 1)
+  )
+
 (use-package evil
   :init
   (setq evil-want-C-u-scroll 1)
@@ -161,7 +168,7 @@
   (define-key evil-insert-state-map "\C-a" 'beginning-of-line)
   (define-key evil-insert-state-map "\C-h" 'backward-delete-char)
   (define-key evil-insert-state-map "\C-u" 'kill-line)
-  (define-key evil-insert-state-map "jj" 'evil-normal-state)
+  (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
   )
 
 (use-package evil-magit
