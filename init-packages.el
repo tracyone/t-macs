@@ -154,6 +154,7 @@
 (use-package evil
   :init
   (setq evil-want-C-u-scroll 1)
+  (evil-mode 1)
   :ensure t
   :config
   (define-key evil-insert-state-map "\C-e" 'end-of-line)
@@ -161,11 +162,17 @@
   (define-key evil-insert-state-map "\C-h" 'backward-delete-char)
   (define-key evil-insert-state-map "\C-u" 'kill-line)
   (define-key evil-insert-state-map "jj" 'evil-normal-state)
-  (evil-mode 1)
   )
 
 (use-package evil-magit
   :ensure t
+  )
+
+;; 用于lisp编程的
+(use-package lispy
+  :ensure t
+  :config
+  (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
   )
 
 (use-package evil-leader
