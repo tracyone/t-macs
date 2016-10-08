@@ -1,7 +1,6 @@
 
 (setq ring-bell-function 'ignore)
 (global-auto-revert-mode t)
-(global-linum-mode t)
 ;;激活缩写模式
 (abbrev-mode t)
 (setq make-backup-files nil)

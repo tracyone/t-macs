@@ -199,7 +199,6 @@
  :ensure t
   :config
   (which-key-mode 1)
-  (setq which-key-side-window-location 'right)
   )
 
 (use-package evil-easymotion
@@ -255,6 +254,11 @@
 	 ("<f3>" . magit-status)
 	 )
 
+  )
+(use-package relative-line-numbers
+  :ensure t
+  :config
+  (global-relative-line-numbers-mode t)
   )
 
 (provide 'init-packages)
