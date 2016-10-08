@@ -179,7 +179,7 @@
 (use-package lispy
   :ensure t
   :config
-  (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
+  (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 0)))
   )
 
 (use-package evil-leader
@@ -285,5 +285,16 @@
   (global-relative-line-numbers-mode t)
   )
 
+(use-package youdao-dictionary
+  :ensure t
+  :init
+  (setq url-automatic-caching t)
+  :bind (
+	 ( "C-c y" . youdao-dictionary-search-at-point)
+	 )
+
+  )
+
 (provide 'init-packages)
+
 
