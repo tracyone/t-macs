@@ -110,7 +110,6 @@
   ;(global-company-mode t)  
   ;)
 
-(load-theme 'molokai t)
 
 (use-package popwin
  :ensure t
@@ -169,6 +168,7 @@
   (define-key evil-insert-state-map "\C-h" 'backward-delete-char)
   (define-key evil-insert-state-map "\C-u" 'kill-line)
   (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+  (define-key evil-visual-state-map (kbd "C-r") 't-macs/evil-quick-replace)
   )
 
 (use-package evil-magit

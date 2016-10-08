@@ -15,4 +15,6 @@
 
 (set-default-font "Consolas-16")
 
+(load-theme 'gruvbox t)
+
 (provide 'init-ui)

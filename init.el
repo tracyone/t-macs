@@ -14,6 +14,7 @@
   (find-file "~/.emacs.d/init.el"))
 
 (require 'init-packages)
+(require 'funcs)
 (require 'init-ui)
 (require 'init-better-default)
 (require 'init-org)

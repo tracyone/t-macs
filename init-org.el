@@ -18,7 +18,7 @@
          (file "~/.emacs.d/snippets.org")
          "* %?\t%^g\n#+BEGIN_SRC %^{language}\n\n#+END_SRC")
         ("c" "Chrome" entry (file+headline "~/.emacs.d/gtd.org" "Quick gtd")
-         "* TODO [#C] %?\n %(tracyone/retrieve-chrome-current-tab-url)\n %i\n %U"
+         "* TODO [#C] %?\n %(t-macs/retrieve-chrome-current-tab-url)\n %i\n %U"
          :empty-lines 1)
         ("l" "links" entry (file+headline "~/.emacs.d/gtd.org" "Quick gtd")
          "* TODO [#C] %?\n  %i\n %a \n %U"

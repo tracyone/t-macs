@@ -13,12 +13,13 @@
 (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
 
 ;;正则递归搜索
-(global-set-key (kbd "M-s o") 'occur-dwim)
+(global-set-key (kbd "M-s o") 't-macs/occur-dwim)
 
 (global-set-key (kbd "<f4>") 'eshell)
 
 ;;readline 快捷键设定
 (global-set-key (kbd "C-w") 'backward-kill-word)
+
 
 
 (provide 'init-keybinding)
