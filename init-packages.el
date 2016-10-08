@@ -152,10 +152,20 @@
   )
 
 (use-package evil
- :ensure t
-  :config
-  (evil-mode 1)
+  :init
   (setq evil-want-C-u-scroll 1)
+  :ensure t
+  :config
+  (define-key evil-insert-state-map "\C-e" 'end-of-line)
+  (define-key evil-insert-state-map "\C-a" 'beginning-of-line)
+  (define-key evil-insert-state-map "\C-h" 'backward-delete-char)
+  (define-key evil-insert-state-map "\C-u" 'kill-line)
+  (define-key evil-insert-state-map "jj" 'evil-normal-state)
+  (evil-mode 1)
+  )
+
+(use-package evil-magit
+  :ensure t
   )
 
 (use-package evil-leader
