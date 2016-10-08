@@ -82,5 +82,10 @@
                                  ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*:[ \t]*function[ \t]*(" 1)
                                  ("Task" "[. \t]task([ \t]*['\"]\\([^'\"]+\\)" 1)))))
 
+(defadvice evil-search-next (after advice-for-evil-search-next activate)
+  (evil-scroll-line-to-center (line-number-at-pos)))
+
+(defadvice evil-search-previous (after advice-for-evil-search-previous activate)
+  (evil-scroll-line-to-center (line-number-at-pos)))
 
 (provide 'funcs)
