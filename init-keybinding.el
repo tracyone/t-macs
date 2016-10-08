@@ -15,6 +15,7 @@
 ;;正则递归搜索
 (global-set-key (kbd "M-s o") 'occur-dwim)
 
+(global-set-key (kbd "<f4>") 'eshell)
 
 ;;readline 快捷键设定
 (global-set-key (kbd "C-w") 'backward-kill-word)
