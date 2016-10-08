@@ -167,6 +167,8 @@
   (define-key evil-insert-state-map "\C-a" 'beginning-of-line)
   (define-key evil-insert-state-map "\C-h" 'backward-delete-char)
   (define-key evil-insert-state-map "\C-u" 'kill-line)
+  (define-key evil-insert-state-map "\C-n" 'evil-next-line)
+  (define-key evil-insert-state-map "\C-p" 'evil-previous-line)
   (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
   (define-key evil-visual-state-map (kbd "C-r") 't-macs/evil-quick-replace)
   )
