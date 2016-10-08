@@ -254,7 +254,7 @@
  :ensure t
   :bind (
 	 ;;iedit
-	 ("M-s e" . iedit-mode)
+	 ("C--" . iedit-mode)
 	 )
   )
 
