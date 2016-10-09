@@ -203,6 +203,13 @@
   (define-key evil-visual-state-map (kbd "C-r") 't-macs/evil-quick-replace)
   )
 
+(use-package evil-visualstar
+  :ensure t
+  :defer t
+  :init
+  (global-evil-visualstar-mode)
+  )
+
 (use-package evil-magit
   :ensure t
   )
