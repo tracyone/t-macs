@@ -163,6 +163,18 @@
   (projectile-mode)
   )
 
+(use-package helm
+  :init
+  (setq helm-semantic-fuzzy-match t)
+  (setq helm-recentf-fuzzy-match t)
+  (setq helm-locate-fuzzy-match t)
+  (setq  helm-M-x-fuzzy-match t)
+  (setq helm-imenu-fuzzy-match t)
+  (setq helm-buffers-fuzzy-matching t)
+  (setq helm-mode-fuzzy-match t)
+  (setq helm-completion-in-region-fuzzy-match t)
+  )
+
 (use-package helm-projectile
   :ensure t
   :init
@@ -186,6 +198,7 @@
   (define-key evil-normal-state-map "\C-l" 'helm-projectile-recentf)
   (define-key evil-normal-state-map "\C-j" 'helm-projectile-switch-to-buffer)
   (define-key evil-normal-state-map "\C-k" 'helm-semantic-or-imenu)
+  (define-key evil-normal-state-map "\M-x" 'helm-M-x)
   (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
   (define-key evil-visual-state-map (kbd "C-r") 't-macs/evil-quick-replace)
   )
