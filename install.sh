@@ -1,9 +1,26 @@
 #!/bin/bash
 # install script for emacs confg 
-mkdir ~/.emacs.d/lisp -p || exit 3
+# usage:./install.sh [c]
+# arg c mean use copy instead of ln
 
-el_files=$(find . -name "*.el")
+if [[ $# -eq 1 || $1 == "c" ]]; then
+    install_cmd="cp -rf"
+else
+    install_cmd="ln -sf"
+fi
+
+echo -e "\nStart ${install_cmd} ...\n"
+
+mkdir ~/.emacs.d/lisp -p || exit 1
+
+el_files=$(find ./lisp -name "*.el")
 
 for i in ${el_files}; do
-    ln -sf $(pwd)/$i ~/.emacs.d/lisp
+    ${install_cmd} $(pwd)/$i ~/.emacs.d/lisp || exit 2
 done
+
+${install_cmd} $(pwd)/init.el ~/.emacs.d || exit 3
+
+echo -e "Install finisih, happy hacking emacs!"
+
+
