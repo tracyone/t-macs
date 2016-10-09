@@ -157,6 +157,19 @@
   (key-chord-mode 1)
   )
 
+(use-package projectile
+  :ensure t
+  :init
+  (projectile-mode)
+  )
+
+(use-package helm-projectile
+  :ensure t
+  :init
+  (setq helm-projectile-fuzzy-match t)
+  (helm-projectile-on)
+  )
+
 (use-package evil
   :init
   (setq evil-want-C-u-scroll 1)
@@ -169,6 +182,10 @@
   (define-key evil-insert-state-map "\C-u" 'kill-line)
   (define-key evil-insert-state-map "\C-n" 'evil-next-line)
   (define-key evil-insert-state-map "\C-p" 'evil-previous-line)
+  (define-key evil-normal-state-map "\C-p" 'helm-projectile)
+  (define-key evil-normal-state-map "\C-l" 'helm-projectile-recentf)
+  (define-key evil-normal-state-map "\C-j" 'helm-projectile-switch-to-buffer)
+  (define-key evil-normal-state-map "\C-k" 'helm-semantic-or-imenu)
   (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
   (define-key evil-visual-state-map (kbd "C-r") 't-macs/evil-quick-replace)
   )
