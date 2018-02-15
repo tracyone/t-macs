@@ -313,11 +313,6 @@
 	 )
 
   )
-(use-package relative-line-numbers
-  :ensure t
-  :config
-  (global-relative-line-numbers-mode t)
-  )
 
 (use-package youdao-dictionary
   :ensure t
