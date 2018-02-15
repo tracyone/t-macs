@@ -1,30 +1,11 @@
 # tracyone's emacs config
 
-Screenshot is coming soon ....
-
-# Installation
-
-Three method to install my config:
+**Quick Install**
 
 ```
-git clone https://github.com/tracyone/t-macs ~/.emacs.d/
+bash -c "$(curl -fsSL https://git.io/vAZ0K)"
 ```
 
-or 
+# Buy me a coffee
 
-clone the repo to somewhere else,then run following script
-
-```bash
-./install.sh 
-```
-
-or 
-
-same as above,beside with a argument `c` which mean use `cp` instead of `ln` command.
-
-```bash
-./install.sh c
-```
-
-
-# Feature introduction
+![donation](https://cloud.githubusercontent.com/assets/4246425/24827592/553bc732-1c7f-11e7-8207-284cccbc2e5c.jpg)
